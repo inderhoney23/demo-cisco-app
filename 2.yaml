@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: inderciscoapp
+  name: indereciscoapp
+  namespace: inderk8s1
+spec:
+  ports:
+  - name: 2134-80
+    port: 2134
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: inderciscoapp
+  type: NodePort
+status:
+  loadBalancer: {}
